@@ -16,3 +16,14 @@ Projeto desenvolvido para testar REST API através do JEST
 
 ## Pré-requitos :white_check_mark: <a name="Pré-requisitos"></a>
 * Instalar o [Nodejs](https://nodejs.org/en/)
+* Instalar o [Postman](https://www.postman.com)
+* Instalar o [MongoDB](https://www.mongodb.com)
+
+## Como executar :rocket: <a name="Como-executar"></a>
+* Clone este repositório na sua máquina;
+* Abra o projeto no seu editor;
+* Execute a seguinte linha de comando:
+	```
+	npm start
+	```
+
