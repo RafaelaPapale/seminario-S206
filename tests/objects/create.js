@@ -1,10 +1,10 @@
 const CreateObjects = {
     serieValida: {
-        name: "Carnival Row",
-        streaming: "Amazon Prime",
+        name: "The Witcher",
+        streaming: "Netflix",
         genero: "Fantasia",
         ano: 2019,
-        sinopse: "",
+        sinopse: "muito louco",
         situacao: "Em andamento",
     }
 };

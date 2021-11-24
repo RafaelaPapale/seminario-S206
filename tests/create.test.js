@@ -13,3 +13,10 @@ describe('POST / ', () => {
     });
 });
 
+describe('POST / ', () => {
+    test('Create An Invalid Serie - API REST', async () => {
+        const response = await request(app).post(`/series/create`).send(CreateObjects.serieValida);
+        expect(response.body.name).toEqual(Constants.ErrorDuplicate.name);
+        expect(response.statusCode).toBe(400);
+    });
+});
