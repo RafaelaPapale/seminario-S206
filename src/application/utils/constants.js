@@ -13,6 +13,11 @@ const Constants = {
         name: 'NotFound',
         message: 'Serie Not Found!',
     },
+
+    ErrorDuplicate: {
+        name: 'Duplicate',
+        message: 'Serie duplicada',
+    }
 };
 
 module.exports = Constants;

@@ -15,10 +15,7 @@ const SeriesSchema = new Schema({
         index: true,
         unique: true,
     },
-    name: {
-        type: String,
-        unique: true,
-    },
+    name: String,
     streaming: String,
     genero: String,
     ano: Number,

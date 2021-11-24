@@ -19,6 +19,7 @@ const SeriesService = {
 
             const response = await SeriesRepository.create(data);
             if (response.code === 11000) {
+                const result = Constants.ErrorDuplicate;
                 return result;
             }
             return response;
