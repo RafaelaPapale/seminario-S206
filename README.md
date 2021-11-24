@@ -13,3 +13,6 @@ Projeto desenvolvido para testar REST API através do JEST
  <a href="https://github.com/GabrielPivoto">Gabriel Pivoto</a> •
  <a href="https://github.com/RafaelaPapale">Rafaela Papale</a>
 </p>
+
+## Pré-requitos :white_check_mark: <a name="Pré-requisitos"></a>
+* Instalar o [Nodejs](https://nodejs.org/en/)
