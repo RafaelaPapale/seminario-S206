@@ -1,6 +1,6 @@
-const CreateObjects = {
+const ObjectTest = {
     serieValida: {
-        name: "The Witcher",
+        nome: "The Witcher",
         streaming: "Netflix",
         genero: "Fantasia",
         ano: 2019,
@@ -8,7 +8,7 @@ const CreateObjects = {
         situacao: "Em andamento",
     },
     serieInvalida:{
-        name: "",
+        nome: "",
         streaming: "Netflix",
         genero: "Fantasia",
         ano: "String",
@@ -16,14 +16,14 @@ const CreateObjects = {
         situacao: "Em andamento",
     },
     deleteValid:{
-        name: "The Witcher",
+        nome: "The Witcher",
     },
     deleteInvalid:{
-        name: "Essa série não existe",
+        nome: "Essa série não existe",
     },
     deleteInvalid2:{
         streaming: "Esse campo está errado",
     },
 };
 
-module.exports = CreateObjects;
+module.exports = ObjectTest;

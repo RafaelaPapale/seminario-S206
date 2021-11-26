@@ -16,7 +16,7 @@ const SeriesRepository = {
         try {
             const update = {
                 genero: data.name,
-                name: data.name,
+                nome: data.nome,
                 ano: data.type,
                 sinopse: data.sinopse,
                 situacao: data.situacao,
@@ -32,9 +32,9 @@ const SeriesRepository = {
         }
     },
 
-    async delete(name) {
+    async delete(nome) {
         try {
-            const response = await SeriesModel.deleteOne({ name }).exec();
+            const response = await SeriesModel.deleteOne({ nome }).exec();
             return response.deletedCount;
         } catch (e) {
             return e;
@@ -50,9 +50,9 @@ const SeriesRepository = {
         }
     },
 
-    async getByName(name) {
+    async getByName(nome) {
         try {
-            const response = await SeriesModel.findOne({ name }).exec();
+            const response = await SeriesModel.findOne({ nome }).exec();
             return response;
         } catch (e) {
             return e;

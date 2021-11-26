@@ -15,7 +15,10 @@ const SeriesSchema = new Schema({
         index: true,
         unique: true,
     },
-    name: String,
+    nome: {
+        type: String,
+        unique: true,
+    },
     streaming: String,
     genero: String,
     ano: Number,
@@ -27,4 +30,5 @@ const SeriesModel = mongoose.model('SeriesModel', SeriesSchema);
 
 module.exports = {
     SeriesModel,
+    mongoose,
 };

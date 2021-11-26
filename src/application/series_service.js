@@ -37,8 +37,12 @@ const SeriesService = {
                 return response;
             }
 
-            const response = await SeriesRepository.delete(data.name);
-            
+            const response = await SeriesRepository.delete(data.nome);
+
+            if(response === 0) {
+                const result = Constants.ErrorNotFound;
+                return result;
+            }           
             return response;
         } catch (error) {
             return error;
@@ -47,9 +51,7 @@ const SeriesService = {
 
     async list() {
         try {
-            
             const response = await SeriesRepository.list();
-            
             return response;
         } catch (error) {
             return error;
