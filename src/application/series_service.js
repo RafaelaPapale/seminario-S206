@@ -27,6 +27,34 @@ const SeriesService = {
             return error;
         }
     },
+
+    async delete(data) {
+        try {
+            const validation = validate.validate(data, Constraints.deleteConstraints);
+            if (validation) {
+                const response = Constants.ErrorValidation;
+                response.message = validation;
+                return response;
+            }
+
+            const response = await SeriesRepository.delete(data.name);
+            
+            return response;
+        } catch (error) {
+            return error;
+        }
+    },
+
+    async list() {
+        try {
+            
+            const response = await SeriesRepository.list();
+            
+            return response;
+        } catch (error) {
+            return error;
+        }
+    },
 };
 
 module.exports = SeriesService;

@@ -32,9 +32,9 @@ const SeriesRepository = {
         }
     },
 
-    async delete(id) {
+    async delete(name) {
         try {
-            const response = await SeriesModel.deleteOne({ id }).exec();
+            const response = await SeriesModel.deleteOne({ name }).exec();
             return response.deletedCount;
         } catch (e) {
             return e;
