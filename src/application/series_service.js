@@ -57,6 +57,40 @@ const SeriesService = {
             return error;
         }
     },
+
+    async listByStreaming(data) {
+        try {
+            const validation = validate.validate(data, Constraints.listByStreaming);
+            if (validation) {
+                const response = Constants.ErrorValidation;
+                response.message = validation;
+                return response;
+            }
+            const response = await SeriesRepository.getByStreaming(data.streaming);
+            if(response === {}) {
+                const result = Constants.ErrorNotFound;
+                return result;
+            }   
+            return response;
+        } catch (error) {
+            return error;
+        }
+    },
+
+    async updateByName(data) {
+        try {
+            const validation = validate.validate(data, Constraints.updateByName);
+            if (validation) {
+                const response = Constants.ErrorValidation;
+                response.message = validation;
+                return response;
+            }
+            const response = await SeriesRepository.update(data);
+            return response;
+        } catch (error) {
+            return error;
+        }
+    },
 };
 
 module.exports = SeriesService;

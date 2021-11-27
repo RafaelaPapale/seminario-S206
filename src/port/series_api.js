@@ -19,5 +19,15 @@ module.exports = (app) => {
         res.status(Utils.responseStatus(response.name));
         res.json(response);
     });
+    app.get(`${route}/list/streaming`, async (req, res) => {
+        const response = await SeriesService.listByStreaming(req.body);
+        res.status(Utils.responseStatus(response.name));
+        res.json(response);
+    });
+    app.put(`${route}/update`, async (req, res) => {
+        const response = await SeriesService.updateByName(req.body);
+        res.status(Utils.responseStatus(response.name));
+        res.json(response);
+    });
 };
 
