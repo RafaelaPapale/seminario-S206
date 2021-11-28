@@ -16,17 +16,17 @@ describe('PUT / ', () => {
 describe('PUT / ', () => {
     test('Update an invalid serie - API REST', async () => {
         const response = await request(app).put('/series/update').send(ObjectTest.updateserieInvalida);
-        expect(response.body).toEqual({});
-        expect(response.statusCode).toBe(200);
+        expect(response.body.name).toEqual(Constants.ErrorNotFound.name);
+        expect(response.statusCode).toBe(404);
     });
 });
 
 describe('PUT / ', () => {
     test('Update an invalid serie 2 - API REST', async () => {
         const response = await request(app).put('/series/update').send(ObjectTest.updateserieInvalida2);
-        expect(response.body).toEqual(Constants.ErrorValidation);
-        expect(response.statusCode).toBe(400);
         mongoose.connection.close();
+        expect(response.body.name).toEqual(Constants.ErrorValidation.name);
+        expect(response.statusCode).toBe(400);
     });
 });
 

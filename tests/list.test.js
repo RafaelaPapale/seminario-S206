@@ -28,17 +28,16 @@ describe('GET / ', () => {
     test('List all series by an invalid streaming - API REST', async () => {
         const response = await request(app).get('/series/list/streaming').send(ObjectTest.listByStreamingInvalid);
         //mongoose.connection.close();
-        //expect(response.body.name).toEqual(CreateObjects.serieValida.name);
-        expect(response.statusCode).toBe(200);
+        expect(response.body.name).toEqual(Constants.ErrorNotFound.name);
+        expect(response.statusCode).toBe(404);
     });
 });
 
 describe('GET / ', () => {
     test('List all series by an invalid streaming 2 - API REST', async () => {
         const response = await request(app).get('/series/list/streaming').send(ObjectTest.listByStreamingInvalid2);
-        //mongoose.connection.close();
-        //expect(response.body.name).toEqual(CreateObjects.serieValida.name);
-        expect(response.statusCode).toBe(400);
         mongoose.connection.close();
+        expect(response.body.name).toEqual(Constants.ErrorValidation.name);
+        expect(response.statusCode).toBe(400);
     });
 });

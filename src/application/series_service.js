@@ -67,7 +67,7 @@ const SeriesService = {
                 return response;
             }
             const response = await SeriesRepository.getByStreaming(data.streaming);
-            if(response === {}) {
+            if(response.length === 0) {
                 const result = Constants.ErrorNotFound;
                 return result;
             }   
@@ -86,6 +86,10 @@ const SeriesService = {
                 return response;
             }
             const response = await SeriesRepository.update(data);
+            if(response.length === 0) {
+                const result = Constants.ErrorNotFound;
+                return result;
+            }  
             return response;
         } catch (error) {
             return error;
