@@ -24,6 +24,7 @@ const SeriesRepository = {
             const options = { new: true };
             const filter = { nome: data.nome };
             const result = await SeriesModel.findOneAndUpdate(filter, update, options).exec();
+            if(result === null) return []
             return result.toObject();
         } catch (e) {
             return e;
