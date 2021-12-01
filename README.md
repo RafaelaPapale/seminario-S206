@@ -14,6 +14,17 @@ Projeto desenvolvido para testar REST API através do JEST
  <a href="https://github.com/RafaelaPapale">Rafaela Papale</a>
 </p>
 
+## Sumário
+* [Testes realizados](#Testes-realizados)
+* [Pré-Requisitos](#Pré-requisitos)
+* [Como executar](#Como-executar)
+
+## Testes realizados :test_tube:  <a name="Testes-realizados"></a>
+* Criação de séries válidas e inválidas no banco de dados;
+* Remoção de séries válidas e inválidas no banco de dados;
+* Alteração de séries válidas e inválidas no banco de dados;
+* Atualização de séries válidas e inválidas no banco de dados;
+
 ## Pré-requitos :white_check_mark: <a name="Pré-requisitos"></a>
 * Instalar o [Nodejs](https://nodejs.org/en/)
 * Instalar o [MongoDB](https://www.mongodb.com)
